@@ -9,12 +9,54 @@
                     </a>
                 </td>
                 <td class="col-lg-8 col-md-10 col-sm-12" id="header-right">
-                    <span class="d-inline-block d-md-none d-sm-block" id="menu-title">Menü</span>
-                    <a href="#" class="d-inline-block d-md-none d-sm-block"><img src="/img/logo.png" width="32"> Főoldal</a>
-                    <a href="#" class="d-md-inline-block d-sm-block"><img src="/img/bus.png" width="25"> Járatok</a>
-                    <a href="#" class="d-md-inline-block d-sm-block"><img src="/img/busstop.png" width="27"> Megállók</a>
-                    <a href="#" class="d-md-inline-block d-sm-block"><img src="/img/route.png" width="25"> Útvonaltervezés</a>
-                    <a href="#" class="d-md-inline-block d-sm-block"><img src="/img/other.png" width="35"> Továbbiak</a>
+                    <span class="d-inline-block d-md-none d-block" id="menu-title">Menü <hr></span>
+
+                    <ul style="padding: 0;">
+                        <li>
+                            <a href="#" class="d-inline-block d-md-none d-block"><img src="/img/logo.png" width="32"> Főoldal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/bus.png" width="25"> Járatok</a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/busstop.png" width="27"> Megállók</a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/route.png" width="25"> Útvonaltervezés</a>
+                        </li>
+
+                        <li id="last-li" class="d-none d-md-inline-block">
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/other.png" width="35"> Továbbiak</a>
+
+                            <ul id="child-ul">
+                                <li>
+                                    <a href="#" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-md-inline-block d-block"><img src="/img/ticket.png" width="25"> Jegyvásárlás</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-md-inline-block d-block"><img src="/img/driver.png" width="25"> Sofőreink</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-md-inline-block d-block"><img src="/img/login.png" width="25"> Bejelentkezés</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="d-block d-md-none">
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
+                        </li>
+                        <li class="d-block d-md-none">
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/ticket.png" width="25"> Jegyvásárlás</a>
+                        </li>
+                        <li class="d-block d-md-none">
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/driver.png" width="25"> Sofőreink</a>
+                        </li>
+                        <li class="d-block d-md-none">
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/login.png" width="25"> Bejelentkezés</a>
+                        </li>
+                    </ul>
                 </td>
             </tr>
         </table>

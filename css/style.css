@@ -12,7 +12,6 @@ body {
 div#header {
     background: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
-    overflow: hidden;
     position: sticky;
 }
 
@@ -26,6 +25,7 @@ div#header {
     padding: 10px 20px;
     display: inline-block;
 }
+
 #header-right a:hover {
     text-shadow: 2px 2px 20px black;
     transform: scale(1.1);
@@ -41,4 +41,34 @@ div#header {
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
+}
+
+#child-ul {
+    transition: 1s;
+    display: none;
+    position: absolute;
+    left: 5px;
+    z-index: 1000;
+    padding: 0;
+}
+
+#last-li:hover > #child-ul {
+    display: block;
+}
+
+#last-li {
+    position: relative;
+}
+
+#child-ul li {
+    display: block;
+    float: none;
+}
+
+#child-ul li a {
+    padding: 10px 10px;
+}
+
+li {
+    display: inline;
 }

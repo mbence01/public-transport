@@ -10,6 +10,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <?php require_once("/sites/menu.php"); ?>
+        <?php include("sites/menu.php"); ?>
     </body>
 </html>

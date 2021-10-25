@@ -22,6 +22,7 @@
         background: #2c32ff;
         background: rgba(44, 50, 255, .5);
         margin: 5px 5px;
+        text-align: center;
     }
 
     .jarat-record:hover {
@@ -34,6 +35,24 @@
         color: white;
         font-weight: bold;
         font-size: 22px;
+    }
+
+    #bus-data {
+        background: rgba(44, 50, 255, .2);
+        border: 1px solid rgb(44, 50, 255);
+        margin-top: 25px;
+    }
+
+    #busstop-container {
+        margin-left: 20px;
+    }
+
+    #p-time, #p-stopcount {
+        text-align: left;
+        text-indent: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        margin-top: 25px;
     }
 </style>
 

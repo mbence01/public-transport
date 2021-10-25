@@ -6,9 +6,10 @@
 
         $rows = $get_data->fetch_array(MYSQLI_ASSOC);
 
-        echo "<div class='jarat-record' style='background: rgb(44, 50, 255)'><span>" . $_GET["jarat"] . "</span></div>";
-        echo "<p id='p-time'>Menetidő: " . $rows["menetido"];
-        echo "<p id='p-stopcount'>Megállók száma: " . $rows["megallok_szama"];
+        echo "<div class='jarat-record' style='background: rgb(44, 50, 255); margin: 0;'><span>" . $_GET["jarat"] . "</span></div>";
+        echo "<p id='p-time'>Menetidő: " . $rows["menetido"] . " perc";
+        echo "<p id='p-stopcount'>" . $rows["megallok_szama"] . " db megálló";
+        echo "<hr style='height: 2px;'>";
 
         $query_str = "    SELECT megallo.nev, megall.sorszam FROM
                           megall INNER JOIN megallo ON megallo.id = megall.megallo_id
@@ -21,7 +22,14 @@
         $get_data = $sql->query($query_str);
 
         while($rows = $get_data->fetch_array(MYSQLI_ASSOC)) {
-            echo "<tr><td>" . $rows["sorszam"] . "</td><td>" . $rows["nev"] . "</td></tr>";
+            echo "<tr>";
+            echo "    <td>";
+            echo "        <div class='jarat-record' style='padding: 5px 5px;'>";
+            echo "            <span style='font-size: 12px;'>" . $rows["sorszam"] . ".</span>";
+            echo "        </div>";
+            echo "    </td>";
+            echo "    <td style='font-size: 15px; font-weight: bold; text-transform: uppercase;'>" . $rows["nev"] . "</td>";
+            echo "</tr>";
         }
 
         echo "</table>";

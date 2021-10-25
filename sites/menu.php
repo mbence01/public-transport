@@ -13,13 +13,13 @@
 
                     <ul style="padding: 0;">
                         <li>
-                            <a href="#" class="d-inline-block d-md-none d-block"><img src="/img/logo.png" width="32"> Főoldal</a>
+                            <a href="index.php?page=index" class="d-inline-block d-md-none d-block"><img src="/img/logo.png" width="32"> Főoldal</a>
                         </li>
                         <li>
-                            <a href="#" class="d-md-inline-block d-block"><img src="/img/bus.png" width="25"> Járatok</a>
+                            <a href="index.php?page=jarat" class="d-md-inline-block d-block"><img src="/img/bus.png" width="25"> Járatok</a>
                         </li>
                         <li>
-                            <a href="#" class="d-md-inline-block d-block"><img src="/img/busstop.png" width="27"> Megállók</a>
+                            <a href="index.php?page=megallo" class="d-md-inline-block d-block"><img src="/img/busstop.png" width="27"> Megállók</a>
                         </li>
                         <li>
                             <a href="#" class="d-md-inline-block d-block"><img src="/img/route.png" width="25"> Útvonaltervezés</a>

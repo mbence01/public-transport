@@ -17,13 +17,17 @@
     }
 
     .jarat-record {
-        padding: 10px 40px;
+        transition: .5s;
+        padding: 5px 35px;
         background: #2c32ff;
+        background: rgba(44, 50, 255, .5);
         margin: 5px 5px;
     }
 
     .jarat-record:hover {
+        transition: .5s;
         cursor: pointer;
+        background: rgba(44, 50, 255, 1);
     }
 
     .jarat-record span {
@@ -51,11 +55,15 @@
 
                 while($rows = $get_data->fetch_array(MYSQLI_ASSOC)) {
                     echo "<div class='jarat-record'>";
-                    echo "<span>" . $rows["megnevezes"] . "</span>";
+                    echo "    <span>" . $rows["megnevezes"] . "</span>";
                     echo "</div>";
                 }
 
                 ?>
+            </div>
+
+            <div id="bus-data">
+
             </div>
         </div>
     </div>

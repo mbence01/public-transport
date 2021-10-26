@@ -36,7 +36,7 @@
                                     <a href="#" class="d-md-inline-block d-block"><img src="/img/ticket.png" width="25"> Jegyvásárlás</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-md-inline-block d-block"><img src="/img/driver.png" width="25"> Sofőreink</a>
+                                    <a href="index.php?page=sofor" class="d-md-inline-block d-block"><img src="/img/driver.png" width="25"> Sofőreink</a>
                                 </li>
                                 <li>
                                     <a href="#" class="d-md-inline-block d-block"><img src="/img/login.png" width="25"> Bejelentkezés</a>
@@ -51,7 +51,7 @@
                             <a href="#" class="d-md-inline-block d-block"><img src="/img/ticket.png" width="25"> Jegyvásárlás</a>
                         </li>
                         <li class="d-block d-md-none">
-                            <a href="#" class="d-md-inline-block d-block"><img src="/img/driver.png" width="25"> Sofőreink</a>
+                            <a href="index.php?page=sofor" class="d-md-inline-block d-block"><img src="/img/driver.png" width="25"> Sofőreink</a>
                         </li>
                         <li class="d-block d-md-none">
                             <a href="#" class="d-md-inline-block d-block"><img src="/img/login.png" width="25"> Bejelentkezés</a>

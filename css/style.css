@@ -50,6 +50,9 @@ div#header {
     left: 5px;
     z-index: 999;
     padding: 0;
+    background: rgba(0, 0, 0, .1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #last-li:hover > #child-ul {

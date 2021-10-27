@@ -13,6 +13,8 @@
     </head>
     <body>
         <?php
+            session_start();
+
             include("sites/menu.php");
             include("Controller.php");
 

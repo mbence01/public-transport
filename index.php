@@ -15,6 +15,7 @@
         <?php
             session_start();
 
+            include_once('sql/db_conn.php');
             include("sites/menu.php");
             include("Controller.php");
 

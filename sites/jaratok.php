@@ -68,8 +68,6 @@
             <div id="jaratok" class="d-flex flex-wrap justify-content-center">
                 <?php
 
-                include_once("sql/db_conn.php");
-
                 $get_data = $sql->query("SELECT megnevezes FROM jarat ORDER BY megnevezes");
 
                 while($rows = $get_data->fetch_array(MYSQLI_ASSOC)) {

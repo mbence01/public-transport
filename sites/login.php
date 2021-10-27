@@ -86,8 +86,6 @@ if(isset($_SESSION["logged"]) and isset($_SESSION["userid"]) and $_SESSION["logg
 <?php
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once('sql/db_conn.php');
-
     if(isset($_GET["type"]) and $_GET["type"] == "reg") {
         if(strlen($_POST["username"]) == 0 or strlen($_POST["password"]) == 0 or strlen($_POST["email"]) == 0) {
             echo "<script>alert('Nem töltöttél ki minden mezőt!'); window.location = history.back();</script>";

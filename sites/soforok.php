@@ -54,8 +54,6 @@
             <div id="main-container" class="d-flex flex-wrap justify-content-center">
                 <?php
 
-                include_once('sql/db_conn.php');
-
                 $get_data = $sql->query("SELECT vezeteknev, keresztnev, szemelyi_szam, csatlakozas_datuma FROM sofor ORDER BY vezeteknev, keresztnev");
 
                 while($rows = $get_data->fetch_array(MYSQLI_ASSOC)) {

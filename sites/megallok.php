@@ -75,8 +75,6 @@
 
                 <?php
 
-                include_once('sql/db_conn.php');
-
                 $get_data = null;
 
                 if(isset($_GET["sortby"])) {

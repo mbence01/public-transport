@@ -51,6 +51,7 @@
                                     ?>
                                     </a>
                                 </li>
+                                <?php showAdmin(false); ?>
                             </ul>
                         </li>
 
@@ -76,9 +77,32 @@
                                 ?>
                             </a>
                         </li>
+                        <?php showAdmin(true); ?>
                     </ul>
                 </td>
             </tr>
         </table>
     </div>
 </div>
+
+<?php
+
+function showAdmin($mobile) {
+    global $sql;
+
+    $check_admin = $sql->query("SELECT id FROM felhasznalo WHERE id = " . $_SESSION["userid"] . " AND admin > 0");
+
+    if($check_admin->num_rows == 0)
+        return 1;
+
+    if($mobile)
+        echo "<li class='d-block d-md-none'>";
+    else
+        echo "<li>";
+
+    echo "<a href='index.php?page=admin' class='d-md-inline-block d-block' style='color: red; font-weight: bold;'><img src='img/admin.png' width='32'> Adminpanel</a>";
+    echo "</li>";
+    return 1;
+}
+
+?>

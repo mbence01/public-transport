@@ -23,7 +23,7 @@
         margin: 20px auto;
     }
 
-    span {
+    span:not(#main-title) {
         font-size: 11px;
         font-weight: bold;
     }
@@ -149,7 +149,7 @@
 
                 <?php
 
-                $get_tickets = $sql->query("SELECT * FROM jegy 
+                $get_tickets = $sql->query("SELECT jegy.id, jegy.nev, jegy.mennyiseg, jegy.datum, felhasznalo.email FROM jegy 
                                                     INNER JOIN felhasznalo ON felhasznalo.id = jegy.user_id
                                                     WHERE user_id = " . $_SESSION["userid"] . " ORDER BY datum DESC");
 

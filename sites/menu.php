@@ -22,16 +22,13 @@
                             <a href="index.php?page=megallo" class="d-md-inline-block d-block"><img src="/img/busstop.png" width="27"> Megállók</a>
                         </li>
                         <li>
-                            <a href="#" class="d-md-inline-block d-block"><img src="/img/route.png" width="25"> Útvonaltervezés</a>
+                            <a href="#" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
                         </li>
 
                         <li id="last-li" class="d-none d-md-inline-block">
                             <a href="#" class="d-md-inline-block d-block"><img src="/img/other.png" width="35"> Továbbiak</a>
 
                             <ul id="child-ul">
-                                <li>
-                                    <a href="#" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
-                                </li>
                                 <li>
                                     <a href="index.php?page=jegy" class="d-md-inline-block d-block"><img src="/img/ticket.png" width="25"> Jegyvásárlás</a>
                                 </li>
@@ -55,9 +52,6 @@
                             </ul>
                         </li>
 
-                        <li class="d-block d-md-none">
-                            <a href="#" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
-                        </li>
                         <li class="d-block d-md-none">
                             <a href="index.php?page=jegy" class="d-md-inline-block d-block"><img src="/img/ticket.png" width="25"> Jegyvásárlás</a>
                         </li>

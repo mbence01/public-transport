@@ -22,7 +22,7 @@
                             <a href="index.php?page=megallo" class="d-md-inline-block d-block"><img src="/img/busstop.png" width="27"> Megállók</a>
                         </li>
                         <li>
-                            <a href="#" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
+                            <a href="index.php?page=menetrend" class="d-md-inline-block d-block"><img src="/img/schedule.png" width="25"> Menetrend</a>
                         </li>
 
                         <li id="last-li" class="d-none d-md-inline-block">
@@ -82,6 +82,9 @@
 <?php
 
 function showAdmin($mobile) {
+    if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and !$_SESSION["logged"]))
+        return;
+
     global $sql;
 
     $check_admin = $sql->query("SELECT id FROM felhasznalo WHERE id = " . $_SESSION["userid"] . " AND admin > 0");

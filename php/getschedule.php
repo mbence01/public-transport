@@ -19,7 +19,7 @@ if(isset($_GET["jarat"])) {
 
     echo "<div class='jarat-record' style='background: rgb(44, 50, 255); margin: 0;'><span>" . $_GET["jarat"] . " indulások</span></div>";
 
-    echo "<button id='change-day-btn' day='". $day ."' onclick='btnClick(this)'>Váltás ". ($day == "hétvége" ? "hétköznapi" : "hétvégei") ." menetrendre</button>";
+    echo "<button id='change-day-btn' day='". $day ."' onclick='btnClick(this)'>Váltás ". ($day == "hétvége" ? "hétköznapi" : "hétvégi") ." menetrendre</button>";
     echo "<hr style='height: 2px;'>";
 
     echo "<div id='busstop-container'>";

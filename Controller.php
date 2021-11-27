@@ -13,7 +13,9 @@ class Controller {
             if($str[0] != $pagename)
                 continue;
 
-            return $str[1];
+            if(file_exists($str[1]))
+                return $str[1];
+            return "sites/404.html";
         }
         return "sites/404.html";
     }

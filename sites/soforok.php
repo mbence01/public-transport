@@ -54,7 +54,7 @@
             <div id="main-container" class="d-flex flex-wrap justify-content-center">
                 <?php
 
-                $get_data = $sql->query("SELECT CONCAT(vezeteknev, ' ', keresztnev) AS nev, szemelyi_szam, csatlakozas_datuma FROM sofor ORDER BY vezeteknev, keresztnev");
+                $get_data = $sql->query("SELECT CONCAT(vezeteknev, ' ', keresztnev) AS nev, szemelyi_szam, csatlakozas_datuma FROM sofor ORDER BY nev");
 
                 while($rows = $get_data->fetch_array(MYSQLI_ASSOC)) {
                     $imgViewerUrl = "ImageViewer.php?table=sofor&selected_field=profil&field=szemelyi_szam&value=" . $rows["szemelyi_szam"];

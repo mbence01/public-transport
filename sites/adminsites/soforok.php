@@ -166,6 +166,7 @@
         <p><input type="file" name="profile" value="Fénykép feltöltése"></p>
 
         <p style="color: darkred; font-size: 10px;">Kattints a megfelelő sofőrnél az 'Adatok módosítása' gombra!</p>
+        <p style="color: darkred; font-size: 10px;">Sofőrhöz tartozó járműveket módosítani csak a Járművek menüpont alatt lehet!</p>
 
         <p><input type="submit" value="Módosítás"></p>
     </form>

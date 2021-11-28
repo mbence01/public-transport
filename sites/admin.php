@@ -104,7 +104,7 @@ function showSideMenu() { ?>
 
         <nav id="admin-nav">
             <a href="index.php?page=admin&menu=jaratok" menu="jaratok">Járatok</a>
-            <a href="#">Megállók</a>
+            <a href="index.php?page=admin&menu=megallok" menu="megallok">Megállók</a>
             <a href="#">Sofőrök</a>
             <a href="#">Menetrend</a>
             <a href="#">Felhasználók</a>

@@ -20,7 +20,6 @@ if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and $_SESSION["adm
         width: 100%;
         background: rgba(44, 50, 255, .6);
         color: white;
-        padding-bottom: 5000px;
     }
 
     #admin-title {
@@ -66,11 +65,11 @@ if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and $_SESSION["adm
 </style>
 
 <div class="container-fluid">
-    <div class="row d-md-none d-xs-block">
-        <?php showSideMenu(); ?>
-    </div>
-
     <div class="row">
+        <div class="d-md-none d-xs-block"> <!-- MOBIL -->
+            <?php showSideMenu(true); ?>
+        </div>
+
         <div class="col-md-3 d-md-block d-none" style="padding: 0;">
             <?php showSideMenu(); ?>
         </div>
@@ -95,9 +94,8 @@ if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and $_SESSION["adm
 
 <?php
 
-function showSideMenu() { ?>
-
-    <div id="adminpanel">
+function showSideMenu($mobile = false) { ?>
+    <div id="adminpanel" <?php echo !$mobile ? "style='padding-bottom: 5000px;'>" : ""; ?>
         <hr class="adminpanel-hr" style="margin-top: 0;">
         <p id="admin-title">Adminpanel</p>
         <hr class="adminpanel-hr">
@@ -105,7 +103,7 @@ function showSideMenu() { ?>
         <nav id="admin-nav">
             <a href="index.php?page=admin&menu=jaratok" menu="jaratok">Járatok</a>
             <a href="index.php?page=admin&menu=megallok" menu="megallok">Megállók</a>
-            <a href="#">Sofőrök</a>
+            <a href="index.php?page=admin&menu=soforok">Sofőrök</a>
             <a href="#">Menetrend</a>
             <a href="#">Felhasználók</a>
         </nav>

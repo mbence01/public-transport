@@ -57,61 +57,35 @@
     <hr size="4">
     </p>
 
-    <form action="php/admin/managebus.php?type=add" method="post">
-        <p><input type="text" name="rendszam" placeholder="Rendszám"></p>
-        <p><input type="text" name="tipus" placeholder="Típus"></p>
-        <p><input type="date" name="ev"></p>
-
+    <form action="php/admin/createroute.php" method="post">
         <?php
 
-        $get_drivers = $sql->query("SELECT CONCAT(vezeteknev, ' ', keresztnev) AS nev, szemelyi_szam FROM sofor ORDER BY nev");
+        $get_routes = $sql->query("SELECT megnevezes FROM jarat ORDER BY megnevezes");
 
         echo "<p>";
-        echo "<select name='sofor'>";
+        echo "Járat: <select name='jarat'>";
 
-        while($rows = $get_drivers->fetch_array(MYSQLI_ASSOC)) {
-            echo "<option value='" . $rows["szemelyi_szam"] . "'>" . $rows["nev"] . " (" . $rows["szemelyi_szam"] . ")</option>";
+        while($rows = $get_routes->fetch_array(MYSQLI_ASSOC)) {
+            echo "<option value='" . $rows["megnevezes"] . "'>" . $rows["megnevezes"] . "</option>";
         }
 
         echo "</select>";
         echo "</p>";
 
         ?>
+
+        <p>
+            <input type="number" min="1" name="menetido" placeholder="Menetidő"> perc
+        </p>
+
+        <p>
+            <input type="number" min="1" name="megallok_szama" placeholder="Megállók száma" id="stopcount"> db megálló
+        </p>
+
+        <div id="stops-container" count="0">
+
+        </div>
 
         <p><input type="submit" value="Hozzáadás" id="edit"></p>
-    </form>
-</div>
-
-<div class="form-container">
-    <p id="jarat-ttl">
-        <img src="img/edit.png" width="32">
-        Jármű szerkesztése
-    <hr size="4">
-    </p>
-
-    <form action="php/admin/managebus.php?type=edit" method="post">
-        <p><input type="hidden" name="rendszam" id="input_rendszam"></p>
-        <p><input type="text" name="tipus" placeholder="Típus" id="input_tipus"></p>
-        <p><input type="date" name="ev" id="input_ev"></p>
-
-        <?php
-
-        $get_drivers = $sql->query("SELECT CONCAT(vezeteknev, ' ', keresztnev) AS nev, szemelyi_szam FROM sofor ORDER BY nev");
-
-        echo "<p>";
-        echo "<select name='sofor' id='input_sofor'>";
-
-        while($rows = $get_drivers->fetch_array(MYSQLI_ASSOC)) {
-            echo "<option value='" . $rows["szemelyi_szam"] . "'>" . $rows["nev"] . " (" . $rows["szemelyi_szam"] . ")</option>";
-        }
-
-        echo "</select>";
-        echo "</p>";
-
-        ?>
-
-        <p style="color: darkred; font-size: 10px;">Használd a fenti táblázatban található Módosítás ikont!</p>
-
-        <p><input type="submit" value="Módosítás"></p>
     </form>
 </div>

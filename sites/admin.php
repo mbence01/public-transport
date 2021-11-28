@@ -1,3 +1,12 @@
+<?php
+
+if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and $_SESSION["admin"] == 0)) {
+    include_once("sites/403.html");
+    die();
+}
+
+?>
+
 <style>
     body {
         background: rgba(44, 50, 255, .4);
@@ -94,7 +103,7 @@ function showSideMenu() { ?>
         <hr class="adminpanel-hr">
 
         <nav id="admin-nav">
-            <a href="#" menu="jaratok">Járatok</a>
+            <a href="index.php?page=admin&menu=jaratok" menu="jaratok">Járatok</a>
             <a href="#">Megállók</a>
             <a href="#">Sofőrök</a>
             <a href="#">Menetrend</a>

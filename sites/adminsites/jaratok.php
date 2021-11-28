@@ -74,7 +74,7 @@
                     <img src='img/edit.png' width='16' title='Módosítás'>
                 </a>
                 
-                <a href='php/admin/deleteroute.php?id=". $rows["megnevezes"] ."'>
+                <a href='php/admin/manageroute.php?type=delete&id=". $rows["megnevezes"] ."'>
                     <img src='img/delete.png' width='16' title='Törlés' onclick='return confirm(`Biztosan törölni szeretnéd a járatot?`)'>
                 </a>
               </td>";
@@ -91,11 +91,11 @@
         <hr size="4">
     </p>
 
-    <form action="php/admin/addroute.php" method="post">
+    <form action="php/admin/manageroute.php?type=add" method="post">
         <p><input type="text" name="megnevezes" placeholder="Járat megnevezése"></p>
         <p><input type="number" name="menetido" placeholder="Menetidő"> perc</p>
         <p><input type="number" name="megallok_szama" placeholder="Megállók száma"> db megálló</p>
-        <p><input type="submit" value="Hozzáadás"></p>
+        <p><input type="submit" value="Hozzáadás" id="edit"></p>
     </form>
 </div>
 
@@ -106,7 +106,7 @@
         <hr size="4">
     </p>
 
-    <form action="php/admin/editroute.php" method="post" id="edit">
+    <form action="php/admin/manageroute.php?type=edit" method="post">
         <p><input type="text" name="megnevezes" id="input_megnevezes"></p>
         <p><input type="number" name="menetido" id="input_menetido"> perc</p>
         <p><input type="number" name="megallok_szama" id="input_megallok_szama"> db megálló</p>

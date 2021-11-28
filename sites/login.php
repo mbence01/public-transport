@@ -3,6 +3,7 @@
 if(isset($_SESSION["logged"]) and isset($_SESSION["userid"]) and $_SESSION["logged"] == true) {
     unset($_SESSION["logged"]);
     unset($_SESSION["userid"]);
+    unset($_SESSION["admin"]);
     echo "<script>window.location.href = 'index.php';</script>";
 }
 
@@ -104,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     } else {
-        $query_str = "SELECT id, email FROM felhasznalo WHERE email = '" . $_POST["email"] . "' AND jelszo = '" . md5(md5($_POST["password"])) . "'";
+        $query_str = "SELECT id, email, admin FROM felhasznalo WHERE email = '" . $_POST["email"] . "' AND jelszo = '" . md5(md5($_POST["password"])) . "'";
         $check_user = $sql->query($query_str);
 
         if($check_user->num_rows != 0) {
@@ -113,6 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["logged"] = true;
             $_SESSION["userid"] = $row["id"];
             $_SESSION["usermail"] = $row["email"];
+            $_SESSION["admin"] = $row["admin"];
 
             echo "<script>alert('Sikeres bejelentkezés!'); window.location.href = 'index.php';</script>";
         } else {

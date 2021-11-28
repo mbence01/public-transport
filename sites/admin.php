@@ -108,6 +108,7 @@ function showSideMenu($mobile = false) { ?>
             <a href="index.php?page=admin&menu=jarmuvek" menu="jarmuvek">Járművek</a>
             <a href="index.php?page=admin&menu=felhasznalok" menu="felhasznalok">Felhasználók</a>
             <a href="index.php?page=admin&menu=hirek" menu="hirek">Hírek</a>
+            <a href="index.php?page=admin&menu=letoltesek" menu="letoltesek">Továbbiak</a>
         </nav>
     </div>
 

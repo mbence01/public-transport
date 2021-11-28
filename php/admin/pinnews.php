@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and !$_SESSION["logged"]) or $_SESSION["admin"] == 0 or !isset($_GET["type"]))
+if(!isset($_SESSION["logged"]) or (isset($_SESSION["logged"]) and !$_SESSION["logged"]) or $_SESSION["admin"] == 0)
     http_response_code(403);
 
 include_once("../../sql/db_conn.php");

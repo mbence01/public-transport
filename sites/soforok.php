@@ -54,14 +54,14 @@
             <div id="main-container" class="d-flex flex-wrap justify-content-center">
                 <?php
 
-                $get_data = $sql->query("SELECT vezeteknev, keresztnev, szemelyi_szam, csatlakozas_datuma FROM sofor ORDER BY vezeteknev, keresztnev");
+                $get_data = $sql->query("SELECT CONCAT(vezeteknev, ' ', keresztnev) AS nev, szemelyi_szam, csatlakozas_datuma FROM sofor ORDER BY vezeteknev, keresztnev");
 
                 while($rows = $get_data->fetch_array(MYSQLI_ASSOC)) {
                     $imgViewerUrl = "ImageViewer.php?table=sofor&selected_field=profil&field=szemelyi_szam&value=" . $rows["szemelyi_szam"];
 
                     echo "<div class='sofor-record'>";
                     echo "<img src='" . $imgViewerUrl . "' height='180'><br>";
-                    echo "<p class='name'>" . $rows["vezeteknev"] . " " . $rows["keresztnev"] . "</p>";
+                    echo "<p class='name'>" . $rows["nev"] . "</p>";
                     echo "<p class='date'>" . $rows["csatlakozas_datuma"] . " óta</p>";
                     echo "</div>";
                 }

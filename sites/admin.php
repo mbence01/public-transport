@@ -102,10 +102,12 @@ function showSideMenu($mobile = false) { ?>
 
         <nav id="admin-nav">
             <a href="index.php?page=admin&menu=jaratok" menu="jaratok">Járatok</a>
+            <a href="index.php?page=admin&menu=jaratvarazslo" menu="jaratvarazslo">Járatvarázsló</a>
             <a href="index.php?page=admin&menu=megallok" menu="megallok">Megállók</a>
-            <a href="index.php?page=admin&menu=soforok">Sofőrök</a>
-            <a href="#">Menetrend</a>
-            <a href="#">Felhasználók</a>
+            <a href="index.php?page=admin&menu=soforok" menu="soforok">Sofőrök</a>
+            <a href="index.php?page=admin&menu=jarmuvek" menu="jarmuvek">Járművek</a>
+            <a href="index.php?page=admin&menu=felhasznalok" menu="felhasznalok">Felhasználók</a>
+            <a href="index.php?page=admin&menu=hirek" menu="hirek">Hírek</a>
         </nav>
     </div>
 
